@@ -4,7 +4,7 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Test
 %define	pnam	Exception
-Summary:	Test::Exception - Convenience routines for testing exception based code
+Summary:	Test::Exception - convenience routines for testing exception based code
 Summary(pl):	Test::Exception - wygodne funkcje do testowania kodu bazuj±cego na wyj±tkach
 Name:		perl-Test-Exception
 Version:	0.15

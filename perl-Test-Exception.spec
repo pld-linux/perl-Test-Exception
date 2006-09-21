@@ -9,7 +9,7 @@ Summary:	Test::Exception - convenience routines for testing exception based code
 Summary(pl):	Test::Exception - wygodne funkcje do testowania kodu bazuj±cego na wyj±tkach
 Name:		perl-Test-Exception
 Version:	0.21
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -39,6 +39,8 @@ sprawnie z Test::More i przyleg³o¶ciami.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
+mv t/Exception.t{,fail}
+mv t/stacktrace.t{,fail}
 
 %build
 %{__perl} Makefile.PL \

@@ -25,6 +25,8 @@ BuildRequires:	perl-Test-Simple >= 0.44
 %endif
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+Requires:	perl(Test::Builder) >= 0.33
+Requires:	perl-Sub-Uplevel >= 0.13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -40,8 +42,6 @@ sprawnie z Test::More i przyleg³o¶ciami.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
-mv t/Exception.t{,fail}
-mv t/stacktrace.t{,fail}
 
 %build
 %{__perl} Makefile.PL \

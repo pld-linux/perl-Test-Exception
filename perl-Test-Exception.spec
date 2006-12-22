@@ -13,16 +13,17 @@ Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Test/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	63013cbd55f9a8e2b8ce02f927fec32d
-BuildRequires:	perl-devel >= 1:5.8.0
+URL:		http://search.cpan.org/dist/Test-Exception/
 %if %{with tests}
-BuildRequires:	perl-IO-String
-BuildRequires:	perl-Pod-Coverage
-BuildRequires:	perl-Sub-Uplevel >= 0.06
-BuildRequires:	perl-Test-Builder-Tester >= 1.01
-BuildRequires:	perl-Test-Simple
+BuildRequires:	perl(Test::Builder) >= 0.33
+BuildRequires:	perl-Sub-Uplevel >= 0.13
+BuildRequires:	perl-Test-Builder-Tester >= 1.04
+BuildRequires:	perl-Test-Harness >= 2.03
+BuildRequires:	perl-Test-Simple >= 0.44
 %endif
+BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -60,5 +61,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{perl_vendorlib}/%{pdir}/*.pm
+%{perl_vendorlib}/Test/*.pm
 %{_mandir}/man3/*

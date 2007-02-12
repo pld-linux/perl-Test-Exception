@@ -6,7 +6,7 @@
 %define		pdir	Test
 %define		pnam	Exception
 Summary:	Test::Exception - convenience routines for testing exception based code
-Summary(pl):	Test::Exception - wygodne funkcje do testowania kodu bazuj±cego na wyj±tkach
+Summary(pl.UTF-8):   Test::Exception - wygodne funkcje do testowania kodu bazujÄ…cego na wyjÄ…tkach
 Name:		perl-Test-Exception
 Version:	0.24
 Release:	1
@@ -35,10 +35,10 @@ This module provides a few convenience methods for testing exception
 based code.  It is built with Test::Builder and plays happily with
 Test::More and friends.
 
-%description -l pl
-Ten modu³ udostêpnia kilka wygodnych metod do testowania kodu
-bazuj±cego na wyj±tkach. Jest budowany z u¿yciem Test::Builder, dzia³a
-sprawnie z Test::More i przyleg³o¶ciami.
+%description -l pl.UTF-8
+Ten moduÅ‚ udostÄ™pnia kilka wygodnych metod do testowania kodu
+bazujÄ…cego na wyjÄ…tkach. Jest budowany z uÅ¼yciem Test::Builder, dziaÅ‚a
+sprawnie z Test::More i przylegÅ‚oÅ›ciami.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}

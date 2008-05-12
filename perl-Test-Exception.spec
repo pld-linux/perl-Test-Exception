@@ -18,7 +18,7 @@ Source0:	http://www.cpan.org/modules/by-module/Test/%{pdir}-%{pnam}-%{version}.t
 URL:		http://search.cpan.org/dist/Test-Exception/
 %if %{with tests}
 BuildRequires:	perl(Test::Builder) >= 0.33
-BuildRequires:	perl-Sub-Uplevel >= 0.13
+BuildRequires:	perl-Sub-Uplevel >= 0.18
 BuildRequires:	perl-Test-Builder-Tester >= 1.04
 BuildRequires:	perl-Test-Harness >= 2.03
 BuildRequires:	perl-Test-Simple >= 0.44
@@ -26,7 +26,7 @@ BuildRequires:	perl-Test-Simple >= 0.44
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 Requires:	perl(Test::Builder) >= 0.33
-Requires:	perl-Sub-Uplevel >= 0.13
+Requires:	perl-Sub-Uplevel >= 0.18
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 

@@ -8,13 +8,13 @@
 Summary:	Test::Exception - convenience routines for testing exception based code
 Summary(pl.UTF-8):	Test::Exception - wygodne funkcje do testowania kodu bazującego na wyjątkach
 Name:		perl-Test-Exception
-Version:	0.27
+Version:	0.31
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/Test/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	dd9383e0bb207c7b0a04d6ba990a5909
+Source0:	http://www.cpan.org/modules/by-module/Test/ADIE/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	adb57ca7614d15e5b307bf5e024b35a8
 URL:		http://search.cpan.org/dist/Test-Exception/
 %if %{with tests}
 BuildRequires:	perl(Test::Builder) >= 0.33
@@ -61,5 +61,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{perl_vendorlib}/Test/*.pm
-%{_mandir}/man3/*
+%{perl_vendorlib}/Test/Exception.pm
+%{_mandir}/man3/Test::Exception.3pm*

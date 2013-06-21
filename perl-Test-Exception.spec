@@ -8,24 +8,24 @@
 Summary:	Test::Exception - convenience routines for testing exception based code
 Summary(pl.UTF-8):	Test::Exception - wygodne funkcje do testowania kodu bazującego na wyjątkach
 Name:		perl-Test-Exception
-Version:	0.31
+Version:	0.32
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/Test/ADIE/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	adb57ca7614d15e5b307bf5e024b35a8
+Source0:	http://www.cpan.org/modules/by-module/Test/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	50e985a335842540b69ea886eeed8a7f
 URL:		http://search.cpan.org/dist/Test-Exception/
 %if %{with tests}
-BuildRequires:	perl(Test::Builder) >= 0.33
+BuildRequires:	perl(Test::Builder) >= 0.70
 BuildRequires:	perl-Sub-Uplevel >= 0.18
-BuildRequires:	perl-Test-Builder-Tester >= 1.04
+BuildRequires:	perl-Test-Builder-Tester >= 1.07
 BuildRequires:	perl-Test-Harness >= 2.03
-BuildRequires:	perl-Test-Simple >= 0.44
+BuildRequires:	perl-Test-Simple >= 0.70
 %endif
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-Requires:	perl(Test::Builder) >= 0.33
+Requires:	perl(Test::Builder) >= 0.70
 Requires:	perl-Sub-Uplevel >= 0.18
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)

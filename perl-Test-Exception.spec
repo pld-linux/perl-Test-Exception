@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_without	tests	# do not perform "make test"
+%bcond_without	tests	# unit tests
 #
 %define		pdir	Test
 %define		pnam	Exception
@@ -12,9 +12,9 @@ Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/Test/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	https://www.cpan.org/modules/by-module/Test/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	572d355026fb0b87fc2b8c64b83cada0
-URL:		http://search.cpan.org/dist/Test-Exception/
+URL:		https://metacpan.org/dist/Test-Exception
 %if %{with tests}
 BuildRequires:	perl(Test::Builder) >= 0.70
 BuildRequires:	perl-Sub-Uplevel >= 0.18
@@ -24,6 +24,7 @@ BuildRequires:	perl-Test-Simple >= 0.70
 %endif
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.745
 Requires:	perl(Test::Builder) >= 0.70
 Requires:	perl-Sub-Uplevel >= 0.18
 BuildArch:	noarch
